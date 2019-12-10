@@ -8,14 +8,22 @@
     <properties resource="generator/jdbc.properties"/>
 
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+        <!-- 格式化 XML 代码 -->
+        <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+        <!-- 生成的 Java 文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
-                <property name="autoDelimitKeywords" value="false" />
+        <property name="autoDelimitKeywords" value="false"/>
 
         <!-- 配置 tk.mybatis 插件 -->
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
             <property name="mappers" value="tk.mybatis.MyMapper"/>
         </plugin>
+
+
+
 
         <!-- 配置数据库连接 -->
         <jdbcConnection
@@ -38,9 +46,9 @@
                 type="XMLMAPPER"/>
 
         <!-- 配置需要指定生成的数据库和表，% 代表所有表 -->
-        <table catalog="TestDb"  tableName="SYS_USER" domainObjectName="SysUserEntity">
+        <table catalog="TestDb" tableName="SYS_ROLE" domainObjectName="SysRoleEntity">
             <!-- mysql 配置 -->
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <!--            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
         </table>
     </context>
 </generatorConfiguration>

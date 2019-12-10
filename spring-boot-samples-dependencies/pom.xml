@@ -28,6 +28,7 @@
         <spring.boot.security.version>2.2.1.RELEASE</spring.boot.security.version>
         <commons.codec.version>1.6</commons.codec.version>
         <commons.lang3.version>3.8.1</commons.lang3.version>
+        <commons-collections.version>3.2.1</commons-collections.version>
     </properties>
 
     <dependencyManagement>
@@ -76,6 +77,13 @@
                 <version>${tk.mybatis.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
@@ -119,10 +127,6 @@
     </pluginRepositories>
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
 
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
