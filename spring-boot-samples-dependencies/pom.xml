@@ -28,7 +28,7 @@
         <spring.boot.security.version>2.2.1.RELEASE</spring.boot.security.version>
         <commons.codec.version>1.6</commons.codec.version>
         <commons.lang3.version>3.8.1</commons.lang3.version>
-        <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
     </properties>
 
     <dependencyManagement>
